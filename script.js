@@ -5,7 +5,7 @@ let eingegebenerRechenweg = "0";
 let berechnetesErgebnis = false;
 
 // Rechenweg anzeigen
-function Hinzufuegen(zeichen){
+function hinzufuegen(zeichen){
     document.getElementById('rechenweg').value += zeichen;
 }
 
@@ -15,5 +15,8 @@ function Hinzufuegen(zeichen){
     weil Inhalt als String mit "X" übergeben werden */
     let eingabe1 = Number(eingabe1.value);
 
+// letzte Eingabe löschen
+// komplette Einagbe löschen
+// Vorzeichen
 
 //ergebnis.innerHTML = userEingabe;

@@ -17,39 +17,32 @@
         <form id="rechner">
             <output id="rechenweg"></output>
             <output id="ergebnis"></output>
+            <br><br>
             <fieldset>
-                <div class="btn-toolbar" role="toolbar" aria-label="Rechner mit fünft Reihen">
-                    <div class="btn-group" role="group" aria-label="erste Reihe"></div>
-                        <button type="button" class="btn btn-secondary p-3 m-1">⇐</button>
-                        <button type="button" class="btn btn-secondary p-3 m-1">AC</button>
-                        <button type="button" class="btn btn-secondary p-3 m-1">%</button>
-                        <button onclick="Hinzufuegen('÷')" type="button" class="btn btn-secondary p-3 m-1">÷</button>
-                    </div>
-                    <div class="btn-group" role="group" aria-label="zweite Reihe">
-                        <button onclick="Hinzufuegen('7')" type="button" class="btn btn-secondary p-3 m-1">7</button>
-                        <button onclick="Hinzufuegen('8')" type="button" class="btn btn-secondary p-3 m-1">8</button>
-                        <button onclick="Hinzufuegen('9')" type="button" class="btn btn-secondary p-3 m-1">9</button>
-                        <button onclick="Hinzufuegen('*')" type="button" class="btn btn-secondary p-3 m-1">x</button>
-                    </div><br>
-                    <div class="btn-group" role="group" aria-label="dritte Reihe">
-                        <button onclick="Hinzufuegen('4')" type="button" class="btn btn-secondary p-3 m-1">4</button>
-                        <button onclick="Hinzufuegen('5')" type="button" class="btn btn-secondary p-3 m-1">5</button>
-                        <button onclick="Hinzufuegen('6')" type="button" class="btn btn-secondary p-3 m-1">6</button>
-                        <button onclick="Hinzufuegen('-')" type="button" class="btn btn-secondary p-3 m-1">-</button>
-                    </div><br>
-                    <div class="btn-group" role="group" aria-label="vierte Reihe">
-                        <button onclick="Hinzufuegen('1')" id="eingabe1" type="button" class="btn btn-secondary p-3 m-1">1</button>
-                        <button onclick="Hinzufuegen('2')" type="button" class="btn btn-secondary p-3 m-1">2</button>
-                        <button onclick="Hinzufuegen('3')" type="button" class="btn btn-secondary p-3 m-1">3</button>
-                        <button onclick="Hinzufuegen('+')" type="button" class="btn btn-secondary p-3 m-1">+</button>
-                    </div><br>
-                    <div class="btn-group" role="group" aria-label="fünfte Reihe">
-                        <button type="button" class="btn btn-secondary p-3 m-1">+/-</button>
-                        <button onclick="Hinzufuegen('0')" type="button" class="btn btn-secondary p-3 m-1">0</button>
-                        <button onclick="Hinzufuegen(',')" type="button" class="btn btn-secondary p-3 m-1">,</button>
-                        <button onclick="berechnen()"type="button" class="btn btn-secondary p-3 m-1">=</button>
-                    </div>
-                </div>
+                <button type="button" class="btn btn-secondary p-3 m-1">⇐</button>
+                <button type="button" class="btn btn-secondary p-3 m-1">AC</button>
+                <button onclick="hinzufuegen('%')" type="button" class="btn btn-secondary p-3 m-1">%</button>
+                <button onclick="hinzufuegen('÷')" type="button" class="btn btn-secondary p-3 m-1">÷</button>
+                <br>
+                <button onclick="hinzufuegen('7')" type="button" class="btn btn-secondary p-3 m-1">7</button>
+                <button onclick="hinzufuegen('8')" type="button" class="btn btn-secondary p-3 m-1">8</button>
+                <button onclick="hinzufuegen('9')" type="button" class="btn btn-secondary p-3 m-1">9</button>
+                <button onclick="hinzufuegen('*')" type="button" class="btn btn-secondary p-3 m-1">x</button>
+                <br>
+                <button onclick="hinzufuegen('4')" type="button" class="btn btn-secondary p-3 m-1">4</button>
+                <button onclick="hinzufuegen('5')" type="button" class="btn btn-secondary p-3 m-1">5</button>
+                <button onclick="hinzufuegen('6')" type="button" class="btn btn-secondary p-3 m-1">6</button>
+                <button onclick="hinzufuegen('-')" type="button" class="btn btn-secondary p-3 m-1">-</button>
+                <br>
+                <button onclick="hinzufuegen('1')" id="eingabe1" type="button" class="btn btn-secondary p-3 m-1">1</button>
+                <button onclick="hinzufuegen('2')" type="button" class="btn btn-secondary p-3 m-1">2</button>
+                <button onclick="hinzufuegen('3')" type="button" class="btn btn-secondary p-3 m-1">3</button>
+                <button onclick="hinzufuegen('+')" type="button" class="btn btn-secondary p-3 m-1">+</button>
+                <br>
+                <button type="button" class="btn btn-secondary p-3 m-1">+/-</button>
+                <button onclick="hinzufuegen('0')" type="button" class="btn btn-secondary p-3 m-1">0</button>
+                <button onclick="hinzufuegen(',')" type="button" class="btn btn-secondary p-3 m-1">,</button>
+                <button onclick="berechnen()" type="button" class="btn btn-secondary p-3 m-1">=</button>
             </fieldset>
         </form>
     </main>
