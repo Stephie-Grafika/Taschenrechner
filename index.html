@@ -3,18 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
-    <title>Taschenrechner</title>
+    <title>Rechner</title>
      <!-- Bootstrap CSS-->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
      <!-- Online bei Netlify unter https://taschenrechner.netlify.app -->
 </head>
-<body>
-    
+<body class="container py-5">
+    <header class="pb-3">
+        <h1>Rechner</h1>
+        <hr>
+    </header>
+    <main>
+        <form id="rechner">
+            <output id="rechenweg"></output>
+            <output id="ergebnis"></output>
+            <fieldset>
+                <div class="btn-toolbar" role="toolbar" aria-label="Rechner mit fünft Reihen">
+                    <div class="btn-group" role="group" aria-label="erste Reihe"></div>
+                        <button type="button" class="btn btn-secondary p-3 m-1">⇐</button>
+                        <button type="button" class="btn btn-secondary p-3 m-1">AC</button>
+                        <button type="button" class="btn btn-secondary p-3 m-1">%</button>
+                        <button onclick="Hinzufuegen('÷')" type="button" class="btn btn-secondary p-3 m-1">÷</button>
+                    </div>
+                    <div class="btn-group" role="group" aria-label="zweite Reihe">
+                        <button onclick="Hinzufuegen('7')" type="button" class="btn btn-secondary p-3 m-1">7</button>
+                        <button onclick="Hinzufuegen('8')" type="button" class="btn btn-secondary p-3 m-1">8</button>
+                        <button onclick="Hinzufuegen('9')" type="button" class="btn btn-secondary p-3 m-1">9</button>
+                        <button onclick="Hinzufuegen('*')" type="button" class="btn btn-secondary p-3 m-1">x</button>
+                    </div><br>
+                    <div class="btn-group" role="group" aria-label="dritte Reihe">
+                        <button onclick="Hinzufuegen('4')" type="button" class="btn btn-secondary p-3 m-1">4</button>
+                        <button onclick="Hinzufuegen('5')" type="button" class="btn btn-secondary p-3 m-1">5</button>
+                        <button onclick="Hinzufuegen('6')" type="button" class="btn btn-secondary p-3 m-1">6</button>
+                        <button onclick="Hinzufuegen('-')" type="button" class="btn btn-secondary p-3 m-1">-</button>
+                    </div><br>
+                    <div class="btn-group" role="group" aria-label="vierte Reihe">
+                        <button onclick="Hinzufuegen('1')" id="eingabe1" type="button" class="btn btn-secondary p-3 m-1">1</button>
+                        <button onclick="Hinzufuegen('2')" type="button" class="btn btn-secondary p-3 m-1">2</button>
+                        <button onclick="Hinzufuegen('3')" type="button" class="btn btn-secondary p-3 m-1">3</button>
+                        <button onclick="Hinzufuegen('+')" type="button" class="btn btn-secondary p-3 m-1">+</button>
+                    </div><br>
+                    <div class="btn-group" role="group" aria-label="fünfte Reihe">
+                        <button type="button" class="btn btn-secondary p-3 m-1">+/-</button>
+                        <button onclick="Hinzufuegen('0')" type="button" class="btn btn-secondary p-3 m-1">0</button>
+                        <button onclick="Hinzufuegen(',')" type="button" class="btn btn-secondary p-3 m-1">,</button>
+                        <button onclick="berechnen()"type="button" class="btn btn-secondary p-3 m-1">=</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <footer class="pt-5">
+        <hr>
+        <p>© Stephanie Ott, 28.12.2025</p>
+    </footer>
     <!-- Javascript für Funktionalität verknüpfen -->
     <script src="script.js"></script>
     <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
